@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useRef, useState } from "react";
 import MonthRangePicker from "./monthRangePicker";
 import monthPickStyle from "./monthPickParent.module.css";
