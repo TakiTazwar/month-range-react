@@ -1,0 +1,144 @@
+.monthRangeContainer {
+  position: absolute;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 6px;
+  padding-left: 6px;
+  background-color: white;
+}
+
+.monthRangePicker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.leftCalender {
+  background-color: white;
+  border-top-left-radius: 12px;
+  padding-left: 2.5%;
+  width: 45%;
+}
+
+.rightCalender {
+  background-color: white;
+  border-top-right-radius: 12px;
+  padding-right: 2.5%;
+  width: 45%;
+}
+.upperLayer {
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 18px;
+  font-family: Arial;
+  font-weight: 500;
+}
+.upperButton {
+  position: relative;
+  border: white;
+  background-color: transparent;
+  cursor: pointer;
+}
+.upperButton:hover {
+  background-color: rgba(182, 218, 213, 0.842);
+}
+
+.yearName {
+  margin: 0 auto;
+}
+
+.blockContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.calenderCell {
+  display: flex;
+  border-radius: 6px;
+  height: 30px;
+  margin: 2px;
+  font-family: Arial;
+  font-size: 10px;
+  text-align: center;
+  color: #6c6b6b;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.calenderCell:hover {
+  opacity: 0.7;
+}
+
+.calenderCellStart {
+  background-color: #009bdf;
+  color: white;
+}
+
+.calenderCellEnd {
+  background-color: #009bdf;
+  color: white;
+}
+
+.calenderCellInbetween {
+  background-color: #dcf5ff;
+}
+
+.calenderCellNormal {
+  background-color: white;
+}
+
+.calenderCellNormal:hover {
+  background-color: #f3f3f3;
+  opacity: 1;
+}
+
+.accessories {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-top: 1px solid rgb(230, 230, 230);
+  background-color: white;
+}
+
+.applyButton {
+  border: #1cb0f6;
+  background-color: #1cb0f6;
+  color: white;
+  margin-right: 12px;
+}
+
+.applyButton:disabled {
+  opacity: 0.3;
+}
+
+.cancelButton {
+  border: 1px solid rgb(230, 230, 230);
+  background-color: transparent;
+  color: rgb(141, 141, 141);
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-right: 20px;
+}
+
+.buttonCommon {
+  border-radius: 6px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 40px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.buttonCommon:hover {
+  opacity: 0.7;
+}
