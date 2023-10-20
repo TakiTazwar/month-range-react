@@ -1,1 +1,3 @@
-export * from './monthRangeParent'
+import MonthRangeParent from './monthRangeParent';
+
+export default MonthRangeParent;

@@ -1,1 +1,4 @@
-export * from './month-range-picker'
+import MonthRangeParent from './month-range-picker';
+
+
+export const MonthRangePicker=MonthRangeParent;
