@@ -1,0 +1,37 @@
+.textField {
+  width: 300px;
+  height: 50px;
+  border: 1px solid rgba(230, 230, 230, 0.705);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left:8px;
+  box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
+}
+
+.calender {
+  margin-bottom: 8px;
+  margin-right: 2px;
+  font-size: 30px;
+}
+
+.dateView
+{
+    font-size: 15px;
+    font-family: Arial;
+    color:#6c6b6b;
+}
+
+
+.focusedBorder
+{
+    border: 1px solid rgba(3, 3, 3, 0.479);
+}
+
+.mainContainer
+{
+    width:100%;
+}
