@@ -9,10 +9,11 @@
   align-items: center;
   justify-content: space-between;
   padding-left: 12px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  box-shadow: #00000033 0px 5px 15px;
 }
 .textFieldDark {
   background-color: #121212;
+  border: 1px solid rgb(88, 88, 88)
 }
 
 .calender {
@@ -32,6 +33,9 @@
 
 .focusedBorder {
   border: 1px solid rgba(3, 3, 3, 0.479);
+}
+.focusedBorderDark {
+  border: 1px solid rgba(204, 204, 204)
 }
 
 .mainContainer {
