@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import MonthRangePicker from "./monthRangePicker";
 import monthPickStyle from "./monthPickParent.module.css";
 
-const MonthPickParent = ({ getDateRangeState, applyFunc, cancelFunc,containerWidth }) => {
+const MonthPickParent = ({ getDateRangeState, applyFunc, cancelFunc,containerWidth,darkTheme }) => {
   const [open, setOpen] = useState(false);
   const [focusState, setFocusState] = useState(false);
   const parentRef = useRef(null);
@@ -51,12 +51,13 @@ const MonthPickParent = ({ getDateRangeState, applyFunc, cancelFunc,containerWid
     <div className={`${monthPickStyle.mainContainer}`}>
       <div
         ref={parentRef}
-        className={`${monthPickStyle.textField} ${
+        className={`${monthPickStyle.textField} ${darkTheme && monthPickStyle.textFieldDark} ${
           focusState ? monthPickStyle.focusedBorder : ""
         }`}
         onClick={togglePicker}
       >
-        <div className={`${monthPickStyle.dateView}`}>
+        <div className={`${monthPickStyle.dateView} ${darkTheme && startMonth &&
+          (startMonth.selectedFirstMonth || startMonth.selectedFirstMonth === 0) && monthPickStyle.dateViewDark }`}>
           {startMonth &&
           (startMonth.selectedFirstMonth || startMonth.selectedFirstMonth === 0)
             ? `${digitToMonth(startMonth.selectedFirstMonth)} ${
@@ -64,7 +65,7 @@ const MonthPickParent = ({ getDateRangeState, applyFunc, cancelFunc,containerWid
               } - ${digitToMonth(endMonth.selectedLastMonth)} ${
                 endMonth.selectedLastYear
               }`
-            : "No Date Selected"}
+            : "No Months Selected"}
         </div>
         <div className={`${monthPickStyle.calender}`}>📅</div>
       </div>
@@ -78,6 +79,7 @@ const MonthPickParent = ({ getDateRangeState, applyFunc, cancelFunc,containerWid
           parentRef={parentRef}
           applyFunc={applyFunc}
           cancelFunc={cancelFunc}
+          darkTheme={darkTheme}
         />
       )}
     </div>
