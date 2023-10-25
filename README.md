@@ -1,6 +1,6 @@
 # Month Range Picker React
 
-Month range picker is a react UI component which is easily customizable and has no depedency except react. Example of code for using the package is given below. Keep Scrolling :)
+Month range picker is a react UI component whic,h is easily customizable and has no depedency except react. Example of code for using the package is given below. Keep Scrolling :)
 
 ### Input Box
 
@@ -36,7 +36,7 @@ function App() {
         applyFunc={() => console.log("Apply from parent")}
         cancelFunc={() => console.log("Cancel from parent")}
         containerWidth="400px"
-        darkMode={false}
+        darkTheme={true}
       />
     </div>
   );
