@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useEffect, useRef, useState } from "react";
 import monthRangeStyle from "./monthRangePicker.module.css";
 const MonthRangePicker = ({
@@ -10,6 +10,7 @@ const MonthRangePicker = ({
   focusState,
   applyFunc,
   cancelFunc,
+  darkTheme,
 }) => {
   const containerRef = useRef(null);
 
@@ -78,7 +79,7 @@ const MonthRangePicker = ({
         compareMonth(selectedFirstMonth, selectedFirstYear, month, year) &&
         compareMonth(month, year, selectedLastMonth, selectedLastYear)
       ) {
-        return monthRangeStyle.calenderCellInbetween;
+        return `${monthRangeStyle.calenderCellInbetween} ${darkTheme && monthRangeStyle.calenderCellInbetweenDark}`;
       }
     }
     if (selectedFirstMonth !== null && selectedLastMonth === null) {
@@ -86,10 +87,12 @@ const MonthRangePicker = ({
         compareMonth(selectedFirstMonth, selectedFirstYear, month, year) &&
         compareMonth(month, year, hoverMonth, hoverYear)
       ) {
-        return monthRangeStyle.calenderCellInbetween;
+        return `${monthRangeStyle.calenderCellInbetween} ${darkTheme && monthRangeStyle.calenderCellInbetweenDark}`;
       }
     }
-    return monthRangeStyle.calenderCellNormal;
+    return `${monthRangeStyle.calenderCellNormal} ${
+      darkTheme && monthRangeStyle.calenderCellNormalDark
+    }`;
   };
 
   const calenderClick = (month, year) => {
@@ -158,14 +161,24 @@ const MonthRangePicker = ({
     <>
       <div
         ref={containerRef}
-        className={monthRangeStyle.monthRangeContainer}
+        className={`${monthRangeStyle.monthRangeContainer} ${
+          darkTheme && monthRangeStyle.monthRangeContainerDark
+        }`}
         style={containerTheme}
       >
-        <div className={monthRangeStyle.monthRangePicker}>
-          <div className={monthRangeStyle.leftCalender}>
+        <div
+          className={`${monthRangeStyle.monthRangePicker} ${
+            darkTheme && monthRangeStyle.monthRangePickerDark
+          }`}
+        >
+          <div
+            className={`${monthRangeStyle.leftCalender} ${
+              darkTheme && monthRangeStyle.leftCalenderDark
+            }`}
+          >
             <div className={monthRangeStyle.upperLayer}>
               <button
-                className={`${monthRangeStyle.upperButton}`}
+                className={`${monthRangeStyle.upperButton} ${darkTheme && monthRangeStyle.upperButtonDark}`}
                 onClick={() => {
                   setYear1(year1 - 1);
                   setYear2(year2 - 1);
@@ -173,7 +186,13 @@ const MonthRangePicker = ({
               >
                 {"<"}
               </button>
-              <div className={`${monthRangeStyle.yearName}`}>{year1}</div>
+              <div
+                className={`${monthRangeStyle.yearName} ${
+                  darkTheme && monthRangeStyle.yearNameDark
+                }`}
+              >
+                {year1}
+              </div>
             </div>
             <div className={monthRangeStyle.blockContainer}>
               {months.map((month, i) => {
@@ -202,11 +221,15 @@ const MonthRangePicker = ({
               })}
             </div>
           </div>
-          <div className={monthRangeStyle.rightCalender}>
+          <div
+            className={`${monthRangeStyle.rightCalender} ${
+              darkTheme && monthRangeStyle.rightCalenderDark
+            }`}
+          >
             <div className={monthRangeStyle.upperLayer}>
-              <div className={`${monthRangeStyle.yearName}`}>{year2}</div>
+              <div className={`${monthRangeStyle.yearName} ${darkTheme && monthRangeStyle.yearNameDark}`}>{year2}</div>
               <button
-                className={`${monthRangeStyle.upperButton}`}
+                className={`${monthRangeStyle.upperButton} ${darkTheme && monthRangeStyle.upperButtonDark}`}
                 onClick={() => {
                   setYear1(year1 + 1);
                   setYear2(year2 + 1);
@@ -219,7 +242,7 @@ const MonthRangePicker = ({
               {months.map((month, i) => {
                 return (
                   <div
-                  key={`${i} ${year2}`}
+                    key={`${i} ${year2}`}
                     className={`${monthRangeStyle.calenderCell} ${getColor(
                       i,
                       year2
@@ -243,7 +266,11 @@ const MonthRangePicker = ({
             </div>
           </div>
         </div>
-        <div className={monthRangeStyle.accessories}>
+        <div
+          className={`${monthRangeStyle.accessories} ${
+            darkTheme && monthRangeStyle.accessoriesDark
+          }`}
+        >
           <button
             className={`${monthRangeStyle.buttonCommon} ${monthRangeStyle.applyButton}`}
             onClick={applyMonths}
@@ -257,7 +284,7 @@ const MonthRangePicker = ({
             Apply
           </button>
           <button
-            className={`${monthRangeStyle.buttonCommon} ${monthRangeStyle.cancelButton}`}
+            className={`${monthRangeStyle.buttonCommon} ${monthRangeStyle.cancelButton} ${darkTheme && monthRangeStyle.cancelButtonDark}`}
             onClick={cancelButton}
           >
             Cancel

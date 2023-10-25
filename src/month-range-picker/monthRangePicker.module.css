@@ -10,18 +10,28 @@
   background-color: white;
 }
 
+.monthRangeContainerDark {
+  background-color: #121212;
+}
+
 .monthRangePicker {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 12px;
 }
-
+.monthRangePickerDark {
+  background-color: #121212;
+}
 .leftCalender {
   background-color: white;
   border-top-left-radius: 12px;
   padding-left: 2.5%;
   width: 45%;
+}
+
+.leftCalenderDark {
+  background-color: #121212;
 }
 
 .rightCalender {
@@ -30,6 +40,10 @@
   padding-right: 2.5%;
   width: 45%;
 }
+.rightCalenderDark {
+  background-color: #121212;
+}
+
 .upperLayer {
   min-height: 60px;
   display: flex;
@@ -45,12 +59,19 @@
   background-color: transparent;
   cursor: pointer;
 }
+.upperButtonDark {
+  color: white;
+}
+
 .upperButton:hover {
   background-color: rgba(182, 218, 213, 0.842);
 }
 
 .yearName {
   margin: 0 auto;
+}
+.yearNameDark {
+  color: white;
 }
 
 .blockContainer {
@@ -91,12 +112,26 @@
   background-color: #dcf5ff;
 }
 
+.calenderCellInbetweenDark {
+  background-color: #525252;
+  color: white;
+}
+
 .calenderCellNormal {
   background-color: white;
 }
 
+.calenderCellNormalDark {
+  background-color: #121212;
+  color: #d4d4d4;
+}
+
 .calenderCellNormal:hover {
   background-color: #f3f3f3;
+  opacity: 1;
+}
+.calenderCellNormalDark:hover {
+  background-color: #333333;
   opacity: 1;
 }
 
@@ -108,6 +143,10 @@
   padding-bottom: 6px;
   border-top: 1px solid rgb(230, 230, 230);
   background-color: white;
+}
+.accessoriesDark {
+  border-top: 1px solid rgb(86, 86, 86);
+  background-color: #121212;
 }
 
 .applyButton {
@@ -128,6 +167,15 @@
   margin-top: 12px;
   margin-bottom: 12px;
   margin-right: 20px;
+}
+.cancelButtonDark {
+  border: 1px solid rgb(69,69,69);
+  color: #d4d4d4;
+}
+.cancelButtonDark:hover
+{
+  border: 1px solid rgb(116,116,116);
+  color: #d4d4d4;
 }
 
 .buttonCommon {
