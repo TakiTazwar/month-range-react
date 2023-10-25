@@ -1,6 +1,6 @@
 {
   "name": "month-range-picker-react",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "This is a month range picker with two month calender two choose from. Selecting or hovering will change the color of month cells",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
